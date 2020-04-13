@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MENU 29</title>
+	<style>
+	*{margin: 0; Padding: 0; box-sizing: border-box;}
+.nav-bar a {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 50px;
+	background: #C0E248;
+	font-family: sans-serif;
+	text-decoration: none;
+	color: #083C60;
+	text-transform: uppercase;
+}
+.nav-bar a:hover {
+	background: tomato;
+	color : #fff;
+}
+.nav-bar ul {
+	display: flex;
+	list-style: none;
+}
+.nav-bar ul li {
+	position: relative;
+	width: 100%;
+	border: 1px solid #FF8F6B;
+	padding: 1px;
+}
+.nav-bar li:hover .D1 > li {
+	position: relative;
+	display: block; 
+}
+.arrow{margin-left: 6px; font-size: 12px; color #eee;}
+.D1 li { display: none; position: relative;}
+.D1 {display: flex; position: absolute; flex-direction: column; width: 100%;}
+.D1 li:hover .D2 > li {display: block;}
+.D2 li {display: none; position: relative;}
+.D2 {display: flex; position: absolute; flex-direction: column; width: 200px; left: 100%; top: 0;}
+.D2 li:hover .D3 li {display: block;}
+.D3 li {display: none;}
+.D3 {display: flex; position: absolute; flex-direction: column; width: 200px; left: 100%; top: 0;}
+.banner {
+		background-image:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url("blue.jpg");
+		height:calc(100vh - 152px);
+		-webkit-background-size: cover;
+		background-size: cover;
+		background-position: center center;
+		display: flex; 
+		justify-content: center; 
+		align-items: center;	
+		}
+.banner h2 {
+	color: red; font-size: 55px; font-weight: bold; font-family: nikosh; text-transform: uppercase;
+}
+#H {
+	background-color: #F7DE94;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100px; font-family: arial; text-transform: uppercase; color: #F35A5A;
+}
+	</style>
+</head>
+<body>
+	<header id ="H">
+		<h1>Wellcome to my Website</h1>
+	</header>
+	<div class="nav-bar">
+		<ul>
+			<li><a href="#">Home</a></li>
+			<li><a href="">About</a></li>
+			<li><a href="#">Services<span class="arrow">&#x25BC</span></a>
+				<ul class="D1">
+					<li><a href="#">Computer</a></li>
+					<li><a href="#">Mobile</a></li>
+					<li><a href="#">Web-design<span class="arrow">&#x25B6</span></a>
+						<ul class="D2">
+							<li><a href="#">PHP</a></li>
+							<li><a href="#">PHP</a></li>
+							<li><a href="#">PHP<span class="arrow">&#x25B6</span></a>
+								<ul class="D3">
+									<li><a href="#">Javascript</a></li>
+									<li><a href="#">Javascript</a></li>
+									<li><a href="#">Javascript</a></li>
+									<li><a href="#">Javascript</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li><a href="#">Web-development</a></li>
+				</ul>
+			</li>
+			<li><a href="#">Contact</a></li>
+			<li><a href="#">Fidback</a></li>
+		</ul>
+	</div>
+	<div class="banner">
+		<h2>Hello World</h2>
+	</div>
+</body>
+</html>
